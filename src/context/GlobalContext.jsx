@@ -4,22 +4,29 @@ const GlobalContext = createContext();
 
 const GlobalProvider = ({ children }) => {
 
-   const defaultApiUrl = "https://api.themoviedb.org/3/search/movie?api_key=b167445376101eff701e058cb616faa9"
+   const myApiKey = "b167445376101eff701e058cb616faa9"
+   const defaultApiUrl = "https://api.themoviedb.org/3/search"
 
-   const [filmData, setFilmData] = useState([])
+   const [filmData, setFilmData] = useState([]);
+   const [seriesData, setSeriesData] = useState([]);
 
    const fetchData = (searchedItem) => {
       const searchedItemTranslated = searchedItem.split(" ").join("+");
-      //console.log(`${defaultApiUrl}&query=${searchedItemTranslated}`);
-
-      axios.get(`${defaultApiUrl}&query=${searchedItemTranslated}`)
+      //CHIAMATA X I FILM:
+      axios.get(`${defaultApiUrl}/movie?api_key=${myApiKey}&query=${searchedItemTranslated}`)
          .then(res => {
             setFilmData(res.data.results)
+         })
+
+      //CHIAMATA X LE SERIE:
+      axios.get(`${defaultApiUrl}/tv?api_key=${myApiKey}&query=${searchedItemTranslated}`)
+         .then(res => {
+            setSeriesData(res.data.results)
          })
    }
 
    return (
-      <GlobalContext.Provider value={{ fetchData, filmData }}>
+      <GlobalContext.Provider value={{ fetchData, filmData, seriesData }}>
          {children}
       </GlobalContext.Provider>
    )

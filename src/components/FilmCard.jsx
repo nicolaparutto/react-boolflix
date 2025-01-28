@@ -1,10 +1,7 @@
-function FilmSeriesCard(props) {
-   const element = props.filmContent;
+import flags from "../assets/data/languagesFlags";
 
-   const flags = {
-      it: "languages-flags/italian.png",
-      en: "languages-flags/english.png"
-   }
+function FilmCard(props) {
+   const element = props.filmContent;
 
    return (
       <>
@@ -22,4 +19,4 @@ function FilmSeriesCard(props) {
    )
 }
 
-export default FilmSeriesCard
+export default FilmCard

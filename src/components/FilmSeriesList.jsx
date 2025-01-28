@@ -1,18 +1,33 @@
 import { useGlobalContext } from "../context/GlobalContext"
-import FilmSeriesCard from "./FilmSeriesCard"
+import FilmCard from "./FilmCard"
+import SeriesCard from "./SeriesCard"
 
 function FilmSeriesList() {
 
-   const { filmData } = useGlobalContext()
+   const { filmData, seriesData } = useGlobalContext()
 
    return (
-      <section>
-         <div className="film-container">
-            {filmData.map(element => (
-               <FilmSeriesCard key={element.id} filmContent={element} />
-            ))}
-         </div>
-      </section>
+      <>
+         <section>
+            <h1>Film</h1>
+            <hr />
+            <div className="series-film-container">
+               {filmData.map(element => (
+                  <FilmCard key={element.id} filmContent={element} />
+               ))}
+            </div>
+         </section>
+
+         <section>
+            <h1>Serie TV</h1>
+            <hr />
+            <div className="series-film-container">
+               {seriesData.map(element => (
+                  <SeriesCard key={element.id} seriesContent={element} />
+               ))}
+            </div>
+         </section>
+      </>
    )
 
 }
