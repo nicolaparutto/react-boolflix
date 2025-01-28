@@ -8,7 +8,9 @@ function FilmSeriesList() {
    return (
       <section>
          <div className="film-container">
-            <FilmSeriesCard filmContent={filmData} />
+            {filmData.map(element => (
+               <FilmSeriesCard key={element.id} filmContent={element} />
+            ))}
          </div>
       </section>
    )
