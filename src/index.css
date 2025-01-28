@@ -17,3 +17,11 @@ main {
 footer {
   margin: 50px;
 }
+
+.yellow-star {
+  color: yellow;
+}
+
+.grey-star {
+  color: grey;
+}
