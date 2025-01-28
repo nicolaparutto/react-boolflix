@@ -4,3 +4,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/*initial css*/
+header {
+  margin: 50px;
+}
+
+main {
+  margin: 50px;
+}
+
+footer {
+  margin: 50px;
+}
