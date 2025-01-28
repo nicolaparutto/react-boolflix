@@ -1,10 +1,15 @@
+import HomePage from "./pages/HomePage"
+import { GlobalProvider } from "./context/GlobalContext"
 function App() {
 
   return (
     <>
-      <h1>Hello World!</h1>
+      <GlobalProvider>
+        <HomePage />
+      </GlobalProvider>
     </>
   )
+
 }
 
 export default App
