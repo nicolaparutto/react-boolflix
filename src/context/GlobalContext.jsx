@@ -10,11 +10,16 @@ const GlobalProvider = ({ children }) => {
 
    const fetchData = (searchedItem) => {
       const searchedItemTranslated = searchedItem.split(" ").join("+");
-      axios.get(`${defaultApiUrl}`)
+      //console.log(`${defaultApiUrl}&query=${searchedItemTranslated}`);
+
+      axios.get(`${defaultApiUrl}&query=${searchedItemTranslated}`)
+         .then(res => {
+            setFilmData(res.data.results)
+         })
    }
 
    return (
-      <GlobalContext.Provider value={{ fetchData }}>
+      <GlobalContext.Provider value={{ fetchData, filmData }}>
          {children}
       </GlobalContext.Provider>
    )

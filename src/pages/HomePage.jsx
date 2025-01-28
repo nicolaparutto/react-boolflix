@@ -10,9 +10,10 @@ function HomePage() {
 
    function handleChange(e) {
       setSearchedItem(e.target.value)
-      /*Probabilmente qui devi scrivere la logica per adattare 
-      la stringa e fare in modo che diventi "corretta" 
-      al momento del passaggio come query string alla chiamata.*/
+   }
+
+   function handleFormSend(e) {
+      e.preventDefault()
    }
 
    return (
@@ -22,8 +23,11 @@ function HomePage() {
                logo --- navbar
             </div>
             <div className="searchbar">
-               <input name="searchbar" id="searchbar" type="text" value={searchedItem} onChange={handleChange} />
-               <button onClick={() => fetchData(searchedItem)}>Cerca</button>
+               <form action="" onSubmit={handleFormSend}>
+
+                  <input name="searchbar" id="searchbar" type="text" value={searchedItem} onChange={handleChange} />
+                  <button onClick={() => fetchData(searchedItem)}>Cerca</button>
+               </form>
             </div>
          </header>
 

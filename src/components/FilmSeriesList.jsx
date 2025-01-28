@@ -1,10 +1,15 @@
 import { useGlobalContext } from "../context/GlobalContext"
+import FilmSeriesCard from "./FilmSeriesCard"
 
 function FilmSeriesList() {
 
+   const { filmData } = useGlobalContext()
+
    return (
       <section>
-         Lista dei film/serie
+         <div className="film-container">
+            <FilmSeriesCard filmContent={filmData} />
+         </div>
       </section>
    )
 
