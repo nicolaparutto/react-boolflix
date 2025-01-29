@@ -7,6 +7,7 @@ function SeriesCard(props) {
    const voteConv = Math.ceil(element.vote_average / 2);
 
    return (
+
       <>
          <div className="film-series-card">
             <div className="card-content">
@@ -14,7 +15,7 @@ function SeriesCard(props) {
                <h2>{element.original_name}</h2>
                <p>Language: {element.original_language}</p>
                <p>Voto Medio: {voteConv}</p>
-               <img src={flags[element.original_language]} alt="" />
+               <img src={flags[element.original_language]} alt={element.original_language} />
                <img src={`https://image.tmdb.org/t/p/w200${element.poster_path}`} alt="" />
                <StarsRating vote={element.vote_average} />
             </div>
