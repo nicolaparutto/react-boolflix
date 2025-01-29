@@ -4,16 +4,17 @@ import StarsRating from "./starsRating";
 function FilmCard(props) {
 
    const element = props.filmContent;
-   const voteConv = Math.ceil(element.vote_average / 2);
 
    return (
 
       <>
          <div className="film-series-card">
-            <div className="card-content debug">
-               <div className="card-image d-none">
+            <div className="card-content">
+               <div className="card-image">
                   <img src={`https://image.tmdb.org/t/p/w200${element.poster_path}`} alt="" />
                </div>
+
+               <div className="card-overlay-container"></div>
 
                <div className="card-info">
                   <h2>{element.title}</h2>

@@ -17,7 +17,7 @@ function FilmSeriesList() {
             </div>
          </section>
 
-         <section className="film-series-section container d-none">
+         <section className="film-series-section container">
             <h1>Serie TV</h1>
             <div className="series-film-container">
                {seriesData.map(element => (
