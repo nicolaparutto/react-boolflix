@@ -1,3 +1,6 @@
+/*google font*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /*css reset*/
 * {
   margin: 0;
@@ -5,13 +8,39 @@
   box-sizing: border-box;
 }
 
-/*initial css*/
-header {
-  margin: 50px;
+/*main colors*/
+:root {
+  --c-red: #DC1A28;
+  --c-dark-red: #BB0710;
+  --c-dark: #141414;
+  --c-white: #fff;
+  --c-transparent: #000000e0;
 }
 
+/*initial css*/
+body {
+  color: #fff;
+  background-color: var(--c-dark);
+  font-family: "Bebas Neue", serif;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--c-white);
+}
+
+/*other*/
 main {
-  margin: 50px;
+  margin-top: 100px;
 }
 
 footer {
@@ -24,4 +53,88 @@ footer {
 
 .grey-star {
   color: grey;
+}
+
+/*==== HEADER ====*/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  background-color: var(--c-transparent);
+}
+
+.header-content {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/*navbar*/
+.navbar {
+  display: flex;
+  align-items: center;
+
+  .logo {
+    width: 180px;
+    margin-right: 50px;
+  }
+
+  .nav {
+    nav ul {
+      display: flex;
+      font-size: 1.2rem;
+
+      li {
+        margin-right: 35px;
+
+        a {
+          position: relative;
+          padding: 10px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--c-red);
+            transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+          }
+
+          &:hover::after {
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*searchbar*/
+.searchbar {
+  input {
+    background-color: var(--c-white);
+    font-size: 1rem;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  button {
+    background-color: var(--c-red);
+    color: var(--c-white);
+    padding: 10px;
+    border: none;
+    border-radius: 100%;
+
+    &:hover {
+      background-color: var(--c-dark-red);
+    }
+  }
 }

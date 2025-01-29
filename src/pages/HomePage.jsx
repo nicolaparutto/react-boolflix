@@ -19,25 +19,38 @@ function HomePage() {
    return (
       <>
          <header>
-            <div className="navbar">
-               logo --- navbar
-            </div>
-            <div className="searchbar">
-               <form action="" onSubmit={handleFormSend}>
-
-                  <input name="searchbar" id="searchbar" type="text" value={searchedItem} onChange={handleChange} />
-                  <button onClick={() => fetchData(searchedItem)}>Cerca</button>
-               </form>
+            <div className="header-content">
+               <div className="navbar">
+                  <div className="logo">
+                     <a href="#"><img src="img/logo.png" alt="" /></a>
+                  </div>
+                  <div className="nav">
+                     <nav>
+                        <ul>
+                           <li><a href="#">Home</a></li>
+                           <li><a href="#">TV series</a></li>
+                           <li><a href="#">Movies</a></li>
+                           <li><a href="#">My List</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+               <div className="searchbar">
+                  <form action="" onSubmit={handleFormSend}>
+                     <input name="searchbar" placeholder="Cerca..." id="searchbar" type="text" value={searchedItem} onChange={handleChange} />
+                     <button onClick={() => fetchData(searchedItem)}><i className="fa-solid fa-magnifying-glass"></i></button>
+                  </form>
+               </div>
             </div>
          </header>
 
-         <hr />
+
 
          <main>
             <FilmSeriesList />
          </main>
 
-         <hr />
+
 
          <footer>
             Footer Della Pagina
