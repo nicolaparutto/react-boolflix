@@ -7,7 +7,7 @@ function StarsRating(props) {
    let ratingStars = "";
 
    if (voteConverted === 0) {
-      ratingStars =
+      ratingStars = (
          <>
             <i className="fa-solid fa-star grey-star"></i>
             <i className="fa-solid fa-star grey-star"></i>
@@ -15,8 +15,9 @@ function StarsRating(props) {
             <i className="fa-solid fa-star grey-star"></i>
             <i className="fa-solid fa-star grey-star"></i>
          </>
+      );
    } else if (voteConverted === 1) {
-      ratingStars =
+      ratingStars = (
          <>
             <i className="fa-solid fa-star yellow-star"></i>
             <i className="fa-solid fa-star grey-star"></i>
@@ -24,8 +25,9 @@ function StarsRating(props) {
             <i className="fa-solid fa-star grey-star"></i>
             <i className="fa-solid fa-star grey-star"></i>
          </>
+      );
    } else if (voteConverted === 2) {
-      ratingStars =
+      ratingStars = (
          <>
             <i className="fa-solid fa-star yellow-star"></i>
             <i className="fa-solid fa-star yellow-star"></i>
@@ -33,8 +35,9 @@ function StarsRating(props) {
             <i className="fa-solid fa-star grey-star"></i>
             <i className="fa-solid fa-star grey-star"></i>
          </>
+      );
    } else if (voteConverted === 3) {
-      ratingStars =
+      ratingStars = (
          <>
             <i className="fa-solid fa-star yellow-star"></i>
             <i className="fa-solid fa-star yellow-star"></i>
@@ -42,8 +45,9 @@ function StarsRating(props) {
             <i className="fa-solid fa-star grey-star"></i>
             <i className="fa-solid fa-star grey-star"></i>
          </>
+      );
    } else if (voteConverted === 4) {
-      ratingStars =
+      ratingStars = (
          <>
             <i className="fa-solid fa-star yellow-star"></i>
             <i className="fa-solid fa-star yellow-star"></i>
@@ -51,8 +55,9 @@ function StarsRating(props) {
             <i className="fa-solid fa-star yellow-star"></i>
             <i className="fa-solid fa-star grey-star"></i>
          </>
+      );
    } else if (voteConverted === 5) {
-      ratingStars =
+      ratingStars = (
          <>
             <i className="fa-solid fa-star yellow-star"></i>
             <i className="fa-solid fa-star yellow-star"></i>
@@ -60,6 +65,7 @@ function StarsRating(props) {
             <i className="fa-solid fa-star yellow-star"></i>
             <i className="fa-solid fa-star yellow-star"></i>
          </>
+      );
    }
 
 
