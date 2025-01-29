@@ -28,9 +28,9 @@ function HomePage() {
                      <nav>
                         <ul>
                            <li><a href="#">Home</a></li>
-                           <li><a href="#">TV series</a></li>
-                           <li><a href="#">Movies</a></li>
-                           <li><a href="#">My List</a></li>
+                           <li><a href="#">Serie TV</a></li>
+                           <li><a href="#">Film</a></li>
+                           <li><a href="#">La mia lista</a></li>
                         </ul>
                      </nav>
                   </div>
@@ -53,7 +53,7 @@ function HomePage() {
 
 
          <footer>
-            Footer Della Pagina
+
          </footer>
       </>
    )

@@ -10,14 +10,28 @@ function FilmCard(props) {
 
       <>
          <div className="film-series-card">
-            <div className="card-content">
-               <h1>{element.title}</h1>
-               <h2>{element.original_title}</h2>
-               <p>Language: {element.original_language}</p>
-               <p>Voto Medio: {voteConv}</p>
-               <img src={flags[element.original_language]} alt={element.original_language} />
-               <img src={`https://image.tmdb.org/t/p/w200${element.poster_path}`} alt="" />
-               <StarsRating vote={element.vote_average} />
+            <div className="card-content debug">
+               <div className="card-image d-none">
+                  <img src={`https://image.tmdb.org/t/p/w200${element.poster_path}`} alt="" />
+               </div>
+
+               <div className="card-info">
+                  <h2>{element.title}</h2>
+                  <div className="language-info">
+                     <span>Lingua:</span>
+                     <div className="flag-container">
+                        <img src={flags[element.original_language]} alt={element.original_language} />
+                     </div>
+                  </div>
+                  <div className="rating-info">
+                     <span>Valutazione media:</span>
+                     <StarsRating vote={element.vote_average} />
+                  </div>
+                  <div className="overview-info">
+                     <span>Trama:</span>
+                     <div className="overview-text">{element.overview}</div>
+                  </div>
+               </div>
             </div>
          </div>
       </>
