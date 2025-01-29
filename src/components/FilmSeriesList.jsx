@@ -17,7 +17,11 @@ function FilmSeriesList() {
                ))}
             </div>
          </section>
-
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
          <section>
             <h1>Serie TV</h1>
             <hr />
