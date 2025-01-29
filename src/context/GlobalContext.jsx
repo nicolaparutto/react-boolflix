@@ -13,7 +13,7 @@ const GlobalProvider = ({ children }) => {
    const fetchData = (searchedItem) => {
       const searchedItemTranslated = searchedItem.split(" ").join("+");
       //CHIAMATA X I FILM:
-      axios.get(`${defaultApiUrl}/movie?api_key=${myApiKey}&query=${searchedItemTranslated}`)
+      axios.get(`${defaultApiUrl}/movie?api_key=${myApiKey}&language=it&query=${searchedItemTranslated}`)
          .then(res => {
             setFilmData(res.data.results)
          })
