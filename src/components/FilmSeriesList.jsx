@@ -19,7 +19,7 @@ function FilmSeriesList() {
 
          <section className="film-series-section container">
             <h1>Serie TV</h1>
-            <div className="series-film-container">
+            <div className="series-film-cards-container">
                {seriesData.map(element => (
                   <SeriesCard key={element.id} seriesContent={element} />
                ))}

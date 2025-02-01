@@ -19,7 +19,7 @@ const GlobalProvider = ({ children }) => {
          })
 
       //CHIAMATA X LE SERIE:
-      axios.get(`${defaultApiUrl}/tv?api_key=${myApiKey}&query=${searchedItemTranslated}`)
+      axios.get(`${defaultApiUrl}/tv?api_key=${myApiKey}&language=it&query=${searchedItemTranslated}`)
          .then(res => {
             setSeriesData(res.data.results)
          })

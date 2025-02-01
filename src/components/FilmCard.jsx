@@ -1,9 +1,12 @@
 import flags from "../assets/data/languagesFlags";
 import StarsRating from "./starsRating";
+import { useState } from "react";
 
 function FilmCard(props) {
 
    const element = props.filmContent;
+
+   const [imgSrc, setImgSrc] = useState(`https://image.tmdb.org/t/p/w200${element.poster_path}`)
 
    return (
 
@@ -11,10 +14,8 @@ function FilmCard(props) {
          <div className="film-series-card">
             <div className="card-content">
                <div className="card-image">
-                  <img src={`https://image.tmdb.org/t/p/w200${element.poster_path}`} alt="" />
+                  <img src={imgSrc} alt="" onError={() => setImgSrc("img/placeholder-img.jpg")} />
                </div>
-
-               <div className="card-overlay-container"></div>
 
                <div className="card-info">
                   <h2>{element.title}</h2>
